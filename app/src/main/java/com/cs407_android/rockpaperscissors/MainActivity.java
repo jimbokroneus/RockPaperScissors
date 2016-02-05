@@ -17,13 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* Uncomment for student template
-
-        if (savedInstanceState == null) {
-            //TODO: Add your code here!
+        if (savedInstanceState != null) {
+            return;
         }
-
-        End student template */
 
         //Something extra ;)
         // Change color programatically
@@ -31,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
         int buttonColor = getResources().getColor(android.R.color.holo_red_light);
         int rippleColor = getResources().getColor(android.R.color.holo_blue_light);
         rb.setColors(buttonColor, rippleColor);
-
-
-        // End TA Implementation
     }
 
     @Override
@@ -44,10 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playPressed(View view) {
-
-        //TA IMPLEMENTATION
-        Intent playIntent = new Intent(this, PlayActivity.class);
-        startActivity(playIntent);
+        //TODO: Put to start game play activity
     }
 
     @Override
