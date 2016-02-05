@@ -11,21 +11,20 @@ public class PlayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_play, menu);
-
-
-        //TA implementation TODO
+        //TA implementation
         getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_fragment_container, PlayFragment.newInstance(null, null))
                 .addToBackStack(null)
                 .commit();
         //TA end
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_play, menu);
 
         return true;
     }

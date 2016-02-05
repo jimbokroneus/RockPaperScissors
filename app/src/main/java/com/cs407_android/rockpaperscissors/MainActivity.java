@@ -32,13 +32,6 @@ public class MainActivity extends AppCompatActivity {
         int rippleColor = getResources().getColor(android.R.color.holo_blue_light);
         rb.setColors(buttonColor, rippleColor);
 
-        // TA Implementation
-
-        if (savedInstanceState == null) {
-            /*getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new BlankFragment())
-                    .commit(); */
-        }
 
         // End TA Implementation
     }
@@ -51,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playPressed(View view) {
+
+        //TA IMPLEMENTATION
         Intent playIntent = new Intent(this, PlayActivity.class);
         startActivity(playIntent);
     }

@@ -13,14 +13,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-//TODO
-//TALK ABOUT FRAGMENT TRANSACTIONS
-//TALK ABOUT FRAGMENT PARAMETERS
-
-//TALK ABOUT look at code to see examples
-
-//TALK ABOUT DIALOGS alert dialog
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -30,13 +22,11 @@ import android.widget.TextView;
  */
 public class PlayFragment extends Fragment {
 
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PLAYER_ONE = "player1";
+    private static final String ARG_PLAYER_TWO = "player2";
 
     private String player1Choice;
     private String player2Choice;
-
 
     private Button rockButton;
     private Button paperButton;
@@ -44,19 +34,19 @@ public class PlayFragment extends Fragment {
     private TextView headerTextView;
 
     /**
+     * DONT CHANGE THIS METHOD
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param player1Choice Player 1's move (null if not specified yet).
+     * @param player2Choice Player 2's move (null if not specified yet).
      * @return A new instance of fragment PlayFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static PlayFragment newInstance(String param1, String param2) {
+    public static PlayFragment newInstance(String player1Choice, String player2Choice) {
         PlayFragment fragment = new PlayFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_PLAYER_ONE, player1Choice);
+        args.putString(ARG_PLAYER_TWO, player2Choice);
         fragment.setArguments(args);
         return fragment;
     }
@@ -70,16 +60,17 @@ public class PlayFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
-            player1Choice = getArguments().getString(ARG_PARAM1);
-            player2Choice = getArguments().getString(ARG_PARAM2);
+            player1Choice = getArguments().getString(ARG_PLAYER_ONE);
+            player2Choice = getArguments().getString(ARG_PLAYER_TWO);
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //TA Implementation
+        //TA Implementation DON'T CHANGE
         View view = null;
         view = inflater.inflate(R.layout.fragment_play, container, false);
 
