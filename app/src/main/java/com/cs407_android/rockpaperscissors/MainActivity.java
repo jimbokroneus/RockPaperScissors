@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void playPressed(View view) {
 
-        //TA IMPLEMENTATION
-        Intent playIntent = new Intent(this, PlayActivity.class);
-        startActivity(playIntent);
+       //TODO
     }
 
     @Override
