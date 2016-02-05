@@ -21,12 +21,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        //Something extra ;)
-        // Change color programatically
-        RippleButton rb = (RippleButton)findViewById(R.id.play);
-        int buttonColor = getResources().getColor(android.R.color.holo_red_light);
-        int rippleColor = getResources().getColor(android.R.color.holo_blue_light);
-        rb.setColors(buttonColor, rippleColor);
     }
 
     @Override
